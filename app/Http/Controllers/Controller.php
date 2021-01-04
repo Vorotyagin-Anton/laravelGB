@@ -32,7 +32,11 @@ class Controller extends BaseController
         [
             'title' => 'category4',
             'description' => 'description for category4'
-        ]
+        ],
+        [
+            'title' => 'category5',
+            'description' => 'description for category5'
+        ],
     ];
 
     protected $news = [
