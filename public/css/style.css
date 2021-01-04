@@ -1,0 +1,135 @@
+/* main */
+* {
+    margin: 0;
+    padding: 0; }
+
+body {
+    font-family: "Lato", sans-serif; }
+
+a {
+    text-decoration: none;
+    cursor: pointer; }
+
+.center {
+    padding: 0 230px;
+    margin: 0 calc(50% - 800px); }
+
+/* styles */
+
+.header {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
+    border: 1px solid #ececec;
+    background-color: #ffffff;
+    height: 100px;
+    display: flex;
+}
+
+.header__name {
+    margin-top: 40px;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2.35px;
+    text-transform: uppercase;
+}
+
+.header__link {
+    color: #222222;
+}
+
+.mainmenu__list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    height: 60px;
+}
+
+.mainmenu__link {
+    color: #222222;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
+}
+
+.mainmenu__link:hover {
+    border-bottom: 3px solid #f16d7f;
+}
+
+.footer {
+    height: 80px;
+    background-color: #e6e6e6;
+    margin-top: 100px; }
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%; }
+.footer__copyright {
+    color: #7a7a7a;
+    font-size: 16px;
+    font-weight: 400; }
+
+.footer__links {
+    display: flex;
+    justify-content: space-between; }
+
+.footer__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    color: #b2b2b2;
+    background-color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    margin-left: 8px;
+    transition: all 0.3s; }
+
+.footer__link:hover {
+    color: #f7f7f8;
+    background-color: #f16d7f; }
+
+.content {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.content__text {
+    margin-top: 50px;
+}
+
+.content__news {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content__newsOne {
+    width: calc(100% - 100px);
+    margin-bottom: 25px;
+    border: 1px solid #f16d7f;
+}
+
+.content__newsOneHead {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.content__newsOneLink {
+    color: #222222;
+}
+
+.content__newsOneLink:hover {
+    color: #f16d7f;
+}
+
+.content__newsOneText {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}

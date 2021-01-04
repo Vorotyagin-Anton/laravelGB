@@ -13,10 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('news');
-});
-
-Route::get('/category/{number}', function (string $number) {
-    return view('category' . $number);
-});
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']);
+Route::get('/category/{number}', [\App\Http\Controllers\CategoryController::class, 'index']);
+Route::get('/news/{number}', [\App\Http\Controllers\NewsController::class, 'index']);
