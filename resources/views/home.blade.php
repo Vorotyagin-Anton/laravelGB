@@ -13,7 +13,7 @@
         <nav class="center mainmenu">
             <ul class="mainmenu__list">
                 @forelse($categories as $key=>$value)
-                    <li><a class="mainmenu__link" href="/category/{{ $key + 1 }}">{{ $value['title'] }}</a></li>
+                    <li><a class="mainmenu__link" href="{{ route('category', ['number' => $key + 1]) }}">{{ $value['title'] }}</a></li>
                 @empty
                     <p>Нет категорий</p>
                 @endforelse

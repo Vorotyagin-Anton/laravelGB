@@ -10,7 +10,7 @@
     <section class="content__news">
         @forelse($news as $newsOne)
             <div class="content__newsOne">
-                <h2 class="content__newsOneHead"><a href="/news/{{ $newsOne['id'] }}" class="content__newsOneLink">{{ $newsOne['head'] }}</a></h2>
+                <h2 class="content__newsOneHead"><a href="{{ route('news', ['number' => $newsOne['id']]) }}" class="content__newsOneLink">{{ $newsOne['head'] }}</a></h2>
                 <p class="content__newsOneText">{{ $newsOne['text'] }}</p>
             </div>
         @empty
