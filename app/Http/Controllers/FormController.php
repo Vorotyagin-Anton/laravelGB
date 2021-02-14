@@ -15,7 +15,7 @@ class FormController extends Controller
 
         if ($request->isMethod('post')) {
             file_put_contents('test.txt', json_encode($request->all()), FILE_APPEND);
-            return redirect()->route('getDataForm');
+            return redirect()->route('getDataForm')->withInput();
         }
     }
 }
