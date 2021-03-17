@@ -133,3 +133,17 @@ a {
     margin-left: 10px;
     margin-bottom: 10px;
 }
+
+.content__form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.content__formHead {
+    margin-top: 10px;
+}
+
+.content__formButton {
+    margin-top: 10px;
+}

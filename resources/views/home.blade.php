@@ -19,6 +19,11 @@
                 @endforelse
             </ul>
         </nav>
+        <nav class="center mainmenu">
+            <ul class="mainmenu__list">
+                <li><a class="mainmenu__link" href="{{ route('getDataForm') }}">Форма запроса на получение выгрузки данных</a></li>
+            </ul>
+        </nav>
         <section class="center content">
             @section('content')
                 <h1 class="content__head">Страница приветствия</h1>
