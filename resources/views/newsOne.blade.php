@@ -1,10 +1,10 @@
 @extends('home')
 
 @section('title')
-    {{ $newsOne['head'] }}
+    {{ $newsOne->title }}
 @endsection
 
 @section('content')
-    <h1 class="content__head">{{ $newsOne['head'] }}</h1>
-    <p class="content__text">{{ $newsOne['text'] }}</p>
+    <h1 class="content__head">{{ $newsOne->title }}</h1>
+    <p class="content__text">{{ $newsOne->inform }}</p>
 @endsection
