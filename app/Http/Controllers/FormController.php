@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categories;
+use App\Models\QueryDataForm;
 use Illuminate\Http\Request;
 
 class FormController extends Controller
@@ -10,11 +12,16 @@ class FormController extends Controller
     {
         if ($request->isMethod('get')) {
             return view('getDataForm')
-                ->with('categories', $this->getCategories());
+                ->with('categories', Categories::all());
         }
 
         if ($request->isMethod('post')) {
-            file_put_contents('test.txt', json_encode($request->all()), FILE_APPEND);
+            $queryDataFormTable = new QueryDataForm;
+            $queryDataFormTable->customer_name = $request->name;
+            $queryDataFormTable->customer_phone = $request->phone;
+            $queryDataFormTable->customer_email = $request->email;
+            $queryDataFormTable->requested_text = $request->info;
+            $queryDataFormTable->save();
             return redirect()->route('getDataForm')->withInput();
         }
     }
