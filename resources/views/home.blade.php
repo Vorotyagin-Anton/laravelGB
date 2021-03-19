@@ -22,6 +22,7 @@
         <nav class="center mainmenu">
             <ul class="mainmenu__list">
                 <li><a class="mainmenu__link" href="{{ route('getDataForm') }}">Форма запроса на получение выгрузки данных</a></li>
+                <li><a class="mainmenu__link" href="{{ route('allNews') }}">Управление новостями</a></li>
             </ul>
         </nav>
         <section class="center content">

@@ -134,6 +134,20 @@ a {
     margin-bottom: 10px;
 }
 
+.content__manageNews {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.content__addNews {
+    margin-bottom: 25px;
+    font-weight: bold;
+    border: 1px solid #f16d7f;
+    padding: 10px;
+}
+
 .content__form {
     display: flex;
     flex-direction: column;
@@ -146,4 +160,11 @@ a {
 
 .content__formButton {
     margin-top: 10px;
+}
+
+
+/* Laravel pagination*/
+
+.w-5 {
+    display: none;
 }
