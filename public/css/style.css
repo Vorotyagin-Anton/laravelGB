@@ -162,6 +162,12 @@ a {
     margin-top: 10px;
 }
 
+.content__error_validation {
+    width: 400px;
+    background-color: indianred;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 
 /* Laravel pagination*/
 
