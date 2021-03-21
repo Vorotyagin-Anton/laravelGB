@@ -31,6 +31,12 @@ class NewsController extends Controller
         $news = new News;
 
         if ($request->isMethod('get')) {
+            if (!empty($request->old())) {
+                $news->title = $request->old('title');
+                $news->inform = $request->old('inform');
+                $news->is_private = $request->old('isPrivate');
+            }
+
             return view('addNews')
                 ->with('categories', Categories::all())
                 ->with('head', 'Добавление новости')
@@ -39,7 +45,7 @@ class NewsController extends Controller
         }
 
         if ($request->isMethod('post')) {
-
+            $this->validate($request, News::getValidationRules(), [], News::getAttributesNames());
             $news->title = $request->title;
             $news->inform = $request->inform;
             $news->is_private = $request->isPrivate;
@@ -59,6 +65,7 @@ class NewsController extends Controller
         }
 
         if ($request->isMethod('post')) {
+            $this->validate($request, News::getValidationRules(), [], News::getAttributesNames());
             $news->title = $request->title;
             $news->inform = $request->inform;
             $news->is_private = $request->isPrivate;
