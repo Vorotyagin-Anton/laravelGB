@@ -1,4 +1,4 @@
-@extends('home')
+@extends('main')
 
 @section('title')
     {{ $newsOne->title }}
