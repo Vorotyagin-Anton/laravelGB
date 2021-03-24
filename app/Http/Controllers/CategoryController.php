@@ -23,7 +23,7 @@ class CategoryController extends Controller
             ->join('news_categories', 'news.id', '=', 'news_categories.news_id')
             ->join('categories', 'categories.id', '=', 'news_categories.category_id')
             ->where('categories.id', '=', $categoryId)
-            ->select('news.id', 'news.title', 'news.inform')
+            ->select('news.id', 'news.title', 'news.inform', 'news.link')
             ->paginate(5);
     }
 }

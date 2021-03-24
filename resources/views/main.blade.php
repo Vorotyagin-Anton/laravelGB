@@ -97,6 +97,8 @@
                 <li><a class="mainmenu__link" href="{{ route('getDataForm') }}">Форма запроса на получение выгрузки данных</a></li>
                 <li><a class="mainmenu__link" href="{{ route('allNews') }}">Управление новостями</a></li>
                 <li><a class="mainmenu__link" href="{{ route('updateProfile') }}">Изменить данные пользователя</a></li>
+                <li><a class="mainmenu__link" href="{{ route('parser') }}">Парсер</a></li>
+                <li><a class="mainmenu__link" href="{{ route('loginVK') }}">Авторизоваться через ВК</a></li>
             </ul>
         </nav>
         <section class="center content">

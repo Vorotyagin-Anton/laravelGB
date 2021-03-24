@@ -12,6 +12,9 @@
             <div class="content__newsOne">
                 <h2 class="content__newsOneHead"><a href="{{ route('news', ['news' => $newsOne->id]) }}" class="content__newsOneLink">{{ $newsOne->title }}</a></h2>
                 <p class="content__newsOneText">{{ $newsOne->inform }}</p>
+                @if ($newsOne->link)
+                    <li><a class="mainmenu__link" href="{{ $newsOne->link }}">Посмотреть в источнике</a></li>
+                @endif
             </div>
         @empty
             <p>Нет новостей</p>
