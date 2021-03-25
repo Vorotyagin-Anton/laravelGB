@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', [\App\Http\Controllers\MainController::class, 'index']);
 Route::get('/index', [\App\Http\Controllers\MainController::class, 'index'])->name('index')->middleware('auth');
 Route::get('/category/{category}', [\App\Http\Controllers\CategoryController::class, 'index'])->name('category')->middleware('auth');
 
@@ -29,3 +30,8 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::match(['post', 'get'], 'updateProfile', [\App\Http\Controllers\Admin\ProfileController::class, 'update'])->name('updateProfile')->middleware('auth', 'is.admin');
+
+Route::get('/parse', [\App\Http\Controllers\Admin\ParserController::class, 'index'])->name('parser')->middleware('auth');
+
+Route::get('/auth/vk', [\App\Http\Controllers\LoginController::class, 'loginVK'])->name('loginVK');
+Route::get('/auth/vk/response', [\App\Http\Controllers\LoginController::class, 'responseVK'])->name('responseVK');
