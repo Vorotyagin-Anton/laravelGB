@@ -35,3 +35,7 @@ Route::get('/parse', [\App\Http\Controllers\Admin\ParserController::class, 'inde
 
 Route::get('/auth/vk', [\App\Http\Controllers\LoginController::class, 'loginVK'])->name('loginVK');
 Route::get('/auth/vk/response', [\App\Http\Controllers\LoginController::class, 'responseVK'])->name('responseVK');
+
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});

@@ -25,7 +25,7 @@
                 @endforeach
             </div>
         @endif
-        <textarea rows="15" class="content__formInput" name="inform">{{ $news->inform }}</textarea>
+        <textarea id="editor" rows="15" class="content__formInput" name="inform">{{ $news->inform }}</textarea>
         <p class="content__formHead">Доступно ли содержание новости для неавторизованных пользователей:</p>
         <p class="content__formHead">Да</p>
         <input type="radio" class="content__formInput" name="isPrivate" value="1" @if ($news->is_private == 1) checked @endif>
@@ -33,4 +33,13 @@
         <input type="radio" class="content__formInput" name="isPrivate" value="0" @if ($news->is_private == 0) checked @endif>
         <button class="content__formButton" type="submit">Отправить на сервер</button>
     </form>
+
+    <script src="//cdn.ckeditor.com/ckeditor5/26.0.0/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
 @endsection
